@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #322653;
+    font-size: 36px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.start-button {
+    background-color: #8062D6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #9288F8;
+}
+
+.game, .result {
+    display: none;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #322653;
+    font-size: 24px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #8062D6;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 36px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.choice i {
+    margin-bottom: 10px;
+}
+
+.choice:hover {
+    background-color: #9288F8;
+    transform: translateY(-5px);
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.choices .user, .choices .computer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choices .user span, .choices .computer span {
+    color: #666;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.round {
+    margin-top: 30px;
+    color: #555;
+    font-size: 24px;
+}
+
+.outcome {
+    margin-top: 10px;
+    color: #322653;
+    font-size: 24px;
+}
+
+.play-again {
+    background-color: #FFD2D7;
+    color: #322653;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.play-again:hover {
+    background-color: #9288F8;
+    color: #fff;
+}

@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <h1>Rock Paper Scissors Game</h1>
+            <button class="start-button" onclick="startGame()">Start</button>
+        </div>
+        <div class="game">
+            <h2>Choose an Option</h2>
+            <div class="options">
+                <button class="choice" onclick="playRound('rock')">
+                    <i class="fas fa-hand-rock"></i>
+                    <span>Rock</span>
+                </button>
+                <button class="choice" onclick="playRound('paper')">
+                    <i class="fas fa-hand-paper"></i>
+                    <span>Paper</span>
+                </button>
+                <button class="choice" onclick="playRound('scissors')">
+                    <i class="fas fa-hand-scissors"></i>
+                    <span>Scissors</span>
+                </button>
+            </div>
+        </div>
+        <div class="result">
+            <h2>Result</h2>
+            <div class="round">Round 1</div>
+            <div class="outcome">---</div>
+            <button class="play-again" onclick="playGame()">Play Again</button>
+        </div>
+        <div class="choices">
+            <div class="user">
+                <div class="choice">
+                    <i class="fas fa-hand-rock"></i>
+                </div>
+                <span>You</span>
+            </div>
+            <div class="computer">
+                <div class="choice">
+                    <i class="fas fa-hand-rock"></i>
+                </div>
+                <span>Computer</span>
+            </div>
+        </div>
+    </div>
     <script src="./game.js"></script>
 </body>
 </html>
