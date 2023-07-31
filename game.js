@@ -1,48 +1,63 @@
-const   gameTools = ["rock" , "paper",  "scissors"]
+const ScoreNum = document.querySelector(".score-number")
+const rock = document.querySelector(".rock")
+const paper = document.querySelector(".paper")
+const Scissors = document.querySelector(".scissors")
+const gameTool = document.querySelector(".rock", ".paper", ".scissors")
+const p = document.querySelector(".who-is-win")
+const gameTools = ["✊", "✋", "✌️"]
 const randomIndex = Math.floor(Math.random() * gameTools.length);
 const randomTool = gameTools[randomIndex]
-console.log(randomTool);
+
 
 let userWin = 0;
 let compWin = 0;
-for (let i = 1; i<=3; i++){
-    const userEnter = prompt("Enter rock or paper or scissors");
 
-if (userEnter == randomTool) {
-    console.log("=")
-}else if ((userEnter == "rock" && randomTool == "scissors") || (userEnter == "scissors" && randomTool == "paper") ||  (userEnter == "paper" && randomTool == "rock")) {
-    userWin++;
-    console.log("user win");
 
-}else{
-    console.log("Computer win");
-    compWin++
+rock.addEventListener("click", () => {
+    const randomIndex = Math.floor(Math.random() * gameTools.length);
+    const randomTool = gameTools[randomIndex]
+    console.log(randomTool);
+    if (randomTool == "✌️") {
+        userWin++;
+        p.textContent = "User win"
+    } else if (randomTool == "✋") {
+        compWin++;
+        p.textContent = "Computer win"
+    } else if (randomTool == "✊") {
+        p.textContent = "="
+    }
+    ScoreNum.textContent = `Computer Win , ${compWin},  User Win, ${userWin}`;
+});
+paper.addEventListener("click", () => {
+    const randomIndex = Math.floor(Math.random() * gameTools.length);
+    const randomTool = gameTools[randomIndex]
+    console.log(randomTool);
+    if (randomTool == "✌️") {
+        compWin++;
+        p.textContent = "Computer win"
+    } else if (randomTool == "✋") {
+        p.textContent = "="
+    } else if (randomTool == "✊") {
+        userWin++;
+        p.textContent = "User win"
+    }
+    ScoreNum.textContent = `Computer Win , ${compWin},  User Win, ${userWin}`;
+});
+Scissors.addEventListener("click", () => {
+    const randomIndex = Math.floor(Math.random() * gameTools.length);
+    const randomTool = gameTools[randomIndex]
+    console.log(randomTool);
+    if (randomTool == "✌️") {
+        p.textContent = "="
+    } else if (randomTool == "✋") {
+        userWin++;
+        p.textContent = "User win"
+    } else if (randomTool == "✊") {
+        compWin++;
+        p.textContent = "Computer win"
+    }
+    ScoreNum.textContent = `Computer Win , ${compWin},  User Win, ${userWin}`;
+});
+if (p.length > 0) {
+    p.innerText = " "
 }
-}
-console.log(compWin);
-console.log(userWin);
-
-const   gameTools = ["rock" , "paper",  "scissors"]
-const randomIndex = Math.floor(Math.random() * gameTools.length);
-const randomTool = gameTools[randomIndex]
-console.log(randomTool);
-
-let userWin = 0;
-let compWin = 0;
-for (let i = 1; i<=3; i++){
-    const userEnter = prompt("Enter rock or paper or scissors");
-
-if (userEnter == randomTool) {
-    console.log("=")
-}else if ((userEnter == "rock" && randomTool == "scissors") || (userEnter == "scissors" && randomTool == "paper") ||  (userEnter == "paper" && randomTool == "rock")) {
-    userWin++;
-    console.log("user win");
-
-}else{
-    console.log("Computer win");
-    compWin++
-}
-}
-console.log(compWin);
-console.log(userWin);
-

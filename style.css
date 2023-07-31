@@ -1,0 +1,36 @@
+body {
+    background-color: lightblue;
+}
+
+.score {
+    padding: 20px 20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    gap: 100px;
+}
+
+li:hover {
+    cursor: pointer;
+    border: 2px solid blue;
+}
+
+.who-is-win {
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
